@@ -1,0 +1,223 @@
+/* Pagewide Formatting */
+html,
+body {
+  font-family: Helvetica;
+  font-size: 18px;
+  margin: 0;
+  background-color: white;
+  line-height: 1.4;
+}
+.container {
+  display: flex;
+  max-width: 960px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+/* Top Banner Section*/
+.top-banner {
+  display: flex;
+  flex-direction: column;
+  height: 31rem;
+  background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/tortoiseshell-optics/resources/images/glasses-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.top-banner .container {
+  display: block;
+  justify-content: flex-end; /*how come this does not push slogan box to right?*/
+}
+/* Header within Top Banner */
+.header {
+  display: flex;
+  width: 960px;
+  margin-top: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: cadetblue;
+  color: white;
+}
+.logo img{
+  height: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+.nav ul {
+  display: inline-flex;
+}
+.nav ul li {
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.issmall {
+  display: none;
+}
+/* Slogan Within Top Banner */
+.slogan {
+  margin-top: 10rem;
+  width: 45%;
+  text-align: right;
+  padding: 1.5rem 5rem;
+  background-color: white;
+  font-size: 2rem;
+  line-height: 1.2;
+  /*
+  Alignment with right side problematic
+  justify-self: right;
+  justify-content: calc(flex-end - 2rem);
+  */
+}
+
+/* Main Section */
+.main .container {
+  justify-content: center;
+}
+.services {
+  display: flex;
+  margin-top: 3rem;
+  height: 8rem;
+}
+.service {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.service img {
+  max-width: 5rem;
+  max-height: 5rem;
+}
+.service-name {
+  word-spacing: 1000000px;
+}
+#comprehensive {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  text-align: center;
+  width: 3.5rem;
+}
+
+/* Company Information Section*/
+.companyinfo {
+  margin-top: 3rem;
+}
+.information {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-head {
+  width: 10rem;
+  background-color: cadetblue;
+  padding: .5rem 1.25rem;
+  font-weight: bold;
+  color: white;
+}
+.info-text {
+  max-width: 100%;
+  padding-top: 1rem;
+  padding-right: 5%;
+}
+
+/* Footer Section */
+.footer .container {
+  margin-top: 5rem;
+  background-color: azure;
+  align-items: center;
+  padding: 4rem;
+  justify-content: flex-start;
+}
+
+.logo-footer img {
+  height: 1.5rem;
+  padding-right: 1rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    width: 100%;
+  }
+  .top-banner {
+    ;
+  }
+  .header {
+    margin-top: 0rem;
+    width: 100%;
+  }
+  .slogan {
+    margin-top: 5rem;
+    padding: 0.75rem 4rem;
+    background-color: white;
+    font-size: 1.33rem;
+    line-height: 1.2;
+    /*Alignment with right side problematic*/
+}
+
+@media only screen and (max-width: 470px) {
+  .isbig {
+    display: none;
+  }
+  .issmall {
+    display: flex;
+  }
+  .top-banner {
+    background-position: 20%;
+    height: 17rem;
+  }
+  .slogan {
+    margin-top: 9rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+    width: auto;
+    text-align: center;
+  }
+  .services {
+    margin: 3.77rem 0rem;
+    flex-direction: column;
+    font-size: .77rem;
+  }
+  .service {
+    min-height: 8rem;
+    padding-bottom: 1.54rem;
+    justify-content: flex-start;
+  }
+  .companyinfo .container {
+    width: auto;
+    margin-top: 15rem;
+    font-size: .77rem;
+    flex-wrap: wrap;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+  }
+  .information {
+    padding-bottom: 4rem;
+  }
+  .info-head {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    /*Alignment with right side problematic*/
+  }
+  .info-text {
+    padding-top: 1rem;
+    padding bottom: 4rem;
+  }
+  .footer .container {
+    width: auto;
+    justify-content: center;
+  }
+  .company-footer {
+    display: none;
+  }
+  .footer .container {
+    width: auto;
+  }
+}
